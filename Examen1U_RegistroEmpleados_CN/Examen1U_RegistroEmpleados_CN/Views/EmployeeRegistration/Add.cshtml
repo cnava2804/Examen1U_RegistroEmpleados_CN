@@ -3,111 +3,112 @@
 @{
     ViewData["Title"] = "Agregar Empleado";
 }
+<div class="p-3 mb-2 bg-dark text-white">
+    <h2>Agregar</h2>
+    <hr />
 
-<h2>Agregar</h2>
-<hr />
+    @*<div class="row">
+            <div class="col-md-4">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="EmpRegistrationNames" class="control-label"></label>
+                        <input asp-for="EmpRegistrationNames" class="form-control" />
+                        <span asp-validation-for="EmpRegistrationNames" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Guardar" class="btn btn-primary" />
+                        <a asp-action="Index" class="btn btn-warning">Regresar</a>
+                    </div>
+                </form>
+            </div>
+        </div>*@
 
-@*<div class="row">
-        <div class="col-md-4">
-            <form asp-action="Create">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="form-group">
-                    <label asp-for="EmpRegistrationNames" class="control-label"></label>
-                    <input asp-for="EmpRegistrationNames" class="form-control" />
-                    <span asp-validation-for="EmpRegistrationNames" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Guardar" class="btn btn-primary" />
-                    <a asp-action="Index" class="btn btn-warning">Regresar</a>
-                </div>
-            </form>
-        </div>
-    </div>*@
-<div>
-    
+    <div>
+
         <form asp-action="Add">
 
             <div class=" pt1">
                 @*<form asp-action="Add">*@
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <div class="form-group row">
-                        <label asp-for="EmpRegistrationNames" class="col-sm-1 col-form-label">Nombres</label>
-                        <div class="col-sm-4">
-                            <input asp-for="EmpRegistrationNames" class="form-control" />
-                            <span asp-validation-for="EmpRegistrationNames" class="text-danger"></span>
-                        </div>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group row">
+                    <label asp-for="EmpRegistrationNames" class="col-sm-1 col-form-label">Nombres</label>
+                    <div class="col-sm-4">
+                        <input asp-for="EmpRegistrationNames" class="form-control" />
+                        <span asp-validation-for="EmpRegistrationNames" class="text-danger"></span>
                     </div>
+                </div>
 
-                    <div class="form-group row">
-                        <label asp-for="EmpRegistrationLastNames" class="col-sm-1 col-form-label">Apellidos</label>
-                        <div class="col-sm-4">
-                            <input asp-for="EmpRegistrationLastNames" class="form-control" />
-                            <span asp-validation-for="EmpRegistrationLastNames" class="text-danger"></span>
-                        </div>
+                <div class="form-group row">
+                    <label asp-for="EmpRegistrationLastNames" class="col-sm-1 col-form-label">Apellidos</label>
+                    <div class="col-sm-4">
+                        <input asp-for="EmpRegistrationLastNames" class="form-control" />
+                        <span asp-validation-for="EmpRegistrationLastNames" class="text-danger"></span>
                     </div>
+                </div>
 
-                    <div class="form-group row">
-                        <label asp-for="EmpRegistrationNickname" class="col-sm-1 col-form-label">Apodo</label>
-                        <div class="col-sm-4">
-                            <input asp-for="EmpRegistrationNickname" class="form-control" />
-                            <span asp-validation-for="EmpRegistrationNickname" class="text-danger"></span>
-                        </div>
+                <div class="form-group row">
+                    <label asp-for="EmpRegistrationNickname" class="col-sm-1 col-form-label">Apodo</label>
+                    <div class="col-sm-4">
+                        <input asp-for="EmpRegistrationNickname" class="form-control" />
+                        <span asp-validation-for="EmpRegistrationNickname" class="text-danger"></span>
                     </div>
+                </div>
 
-                    <div class="form-group row">
-                        <label asp-for="EmpRegistrationDirection" class="col-sm-1 col-form-label">Dirección</label>
-                        <div class="col-sm-4">
-                            <input asp-for="EmpRegistrationDirection" class="form-control" />
-                            <span asp-validation-for="EmpRegistrationDirection" class="text-danger"></span>
-                        </div>
+                <div class="form-group row">
+                    <label asp-for="EmpRegistrationDirection" class="col-sm-1 col-form-label">Dirección</label>
+                    <div class="col-sm-4">
+                        <input asp-for="EmpRegistrationDirection" class="form-control" />
+                        <span asp-validation-for="EmpRegistrationDirection" class="text-danger"></span>
                     </div>
+                </div>
 
-                    <div class="form-group row">
-                        <label asp-for="EmpRegistrationPostalCode" class="col-sm-1 col-form-label">Codigo Postal</label>
-                        <div class="col-sm-4">
-                            <input asp-for="EmpRegistrationPostalCode" class="form-control" />
-                            <span asp-validation-for="EmpRegistrationPostalCode" class="text-danger"></span>
-                        </div>
+                <div class="form-group row">
+                    <label asp-for="EmpRegistrationPostalCode" class="col-sm-1 col-form-label">Codigo Postal</label>
+                    <div class="col-sm-4">
+                        <input asp-for="EmpRegistrationPostalCode" class="form-control" />
+                        <span asp-validation-for="EmpRegistrationPostalCode" class="text-danger"></span>
                     </div>
+                </div>
 
                 @*</form>*@
 
             </div>
 
-            <div class="pt2">
+            <div class="pt001">
                 @*<form asp-action="Add">*@
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <div class="form-group row">
-                        <label asp-for="EmpRegistrationTelephone" class="col-sm-2 col-form-label">Teléfono</label>
-                        <div class="col-sm-10">
-                            <input asp-for="EmpRegistrationTelephone" class="form-control" />
-                            <span asp-validation-for="EmpRegistrationTelephone" class="text-danger"></span>
-                        </div>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group row">
+                    <label asp-for="EmpRegistrationTelephone" class="col-sm-2 col-form-label">Teléfono</label>
+                    <div class="col-sm-10">
+                        <input asp-for="EmpRegistrationTelephone" class="form-control" />
+                        <span asp-validation-for="EmpRegistrationTelephone" class="text-danger"></span>
                     </div>
+                </div>
 
-                    <div class="form-group row">
-                        <label asp-for="EmpRegistrationCellPhoneNumber" class="col-sm-2 col-form-label">Celular</label>
-                        <div class="col-sm-10">
-                            <input asp-for="EmpRegistrationCellPhoneNumber" class="form-control" />
-                            <span asp-validation-for="EmpRegistrationCellPhoneNumber" class="text-danger"></span>
-                        </div>
+                <div class="form-group row">
+                    <label asp-for="EmpRegistrationCellPhoneNumber" class="col-sm-2 col-form-label">Celular</label>
+                    <div class="col-sm-10">
+                        <input asp-for="EmpRegistrationCellPhoneNumber" class="form-control" />
+                        <span asp-validation-for="EmpRegistrationCellPhoneNumber" class="text-danger"></span>
                     </div>
+                </div>
 
-                    <div class="form-group row">
-                        <label asp-for="EmpRegistrationFax" class="col-sm-2 col-form-label">Fax</label>
-                        <div class="col-sm-10">
-                            <input asp-for="EmpRegistrationFax" class="form-control" />
-                            <span asp-validation-for="EmpRegistrationFax" class="text-danger"></span>
-                        </div>
+                <div class="form-group row">
+                    <label asp-for="EmpRegistrationFax" class="col-sm-2 col-form-label">Fax</label>
+                    <div class="col-sm-10">
+                        <input asp-for="EmpRegistrationFax" class="form-control" />
+                        <span asp-validation-for="EmpRegistrationFax" class="text-danger"></span>
                     </div>
+                </div>
 
-                    <div class="form-group row">
-                        <label asp-for="EmpRegistrationEmail" class="col-sm-2 col-form-label">Email</label>
-                        <div class="col-sm-10">
-                            <input asp-for="EmpRegistrationEmail" class="form-control" />
-                            <span asp-validation-for="EmpRegistrationEmail" class="text-danger"></span>
-                        </div>
+                <div class="form-group row">
+                    <label asp-for="EmpRegistrationEmail" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input asp-for="EmpRegistrationEmail" class="form-control" />
+                        <span asp-validation-for="EmpRegistrationEmail" class="text-danger"></span>
                     </div>
+                </div>
 
                 @*</form>*@
 
@@ -124,9 +125,9 @@
                 <a asp-action="Index" class="btn btn-warning">Regresar</a>
             </div>
         </form>
-    
-</div>
 
+    </div>
+</div>
 <link rel="stylesheet" href="~/css/styleER.css" />
 
 @section Scripts {
