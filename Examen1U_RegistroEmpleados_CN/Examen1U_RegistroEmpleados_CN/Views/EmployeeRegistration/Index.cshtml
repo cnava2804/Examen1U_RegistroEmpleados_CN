@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Examen1U_RegistroEmpleados_CN.Models.EmployeeRegistration>
+
+@{
+    ViewData["Title"] = "Empleados";
+}
+<h2>Lista de Empleados</h2>
+
+<div class="row search">
+    <div class="col-auto">
+        <input type="text" class="form-control-plaintext" id="txt-search" placeholder="Buscar..." />
+    </div>
+    <div class="col-auto">
+        <a class="btn btn-secondary" onclick="employeeRegistration_search()" id="search-link"><i class="fas fa-search"></i></a>
+        <a asp-action="Add" class="btn btn-success"><i class="far fa-file"></i> Nuevo</a>
+    </div>
+</div>
+<br />
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmpRegistrationNames)
+                </th>
+                <th></th>
+                @*<th></th>*@
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@Html.DisplayFor(model => item.EmpRegistrationNames)</td>
+                @*<td>
+                    <a asp-action="Edit" class="btn btn-warning" asp-route-id="@item.EmpRegistrationId"><i class="fas fa-edit"></i> Editar</a>
+                    <a asp-action="Details" class="btn btn-success" asp-route-id="@item.EmpRegistrationId"><i class="far fa-file-alt"></i> Detalles</a>
+                    <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.EmpRegistrationId"><i class="far fa-trash-alt"></i> Borrar</a>
+                </td>*@
+                <td>
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Seleccionar</button>
+                    <div class="dropdown-menu">
+                        <a asp-action="Edit" class="dropdown-item" asp-route-id="@item.EmpRegistrationId"><i class="fas fa-edit"></i> Editar</a>
+                        <a asp-action="Details" class="dropdown-item" asp-route-id="@item.EmpRegistrationId"><i class="far fa-file-alt"></i> Detalles</a>
+                        <a asp-action="Delete" class="dropdown-item" asp-route-id="@item.EmpRegistrationId"><i class="far fa-trash-alt"></i> Eliminar</a>
+                        
+                        <div role="separator" class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Seleccionar</a>
+                    </div>
+                </td>
+            </tr>
+
+            }
+        </tbody>
+
+    </table>
+</div>
+
+<div class="input-group">
+    <input type="text" class="form-control" aria-label="Text input with dropdown button">
+    <div class="input-group-append">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div role="separator" class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="~/css/common.css" />
+<script src="~/js/EmployeeRegistration.js" asp-append-version="true"></script>

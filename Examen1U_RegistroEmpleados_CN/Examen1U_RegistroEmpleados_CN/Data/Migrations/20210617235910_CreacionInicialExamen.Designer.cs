@@ -4,62 +4,22 @@ using Examen1U_RegistroEmpleados_CN.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Examen1U_RegistroEmpleados_CN.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210617235910_CreacionInicialExamen")]
+    partial class CreacionInicialExamen
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.6")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("Examen1U_RegistroEmpleados_CN.Models.EmployeeRegistration", b =>
-                {
-                    b.Property<int>("EmpRegistrationId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("EmpRegistrationCellPhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EmpRegistrationDirection")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EmpRegistrationEmail")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EmpRegistrationFax")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EmpRegistrationLastNames")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EmpRegistrationNames")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EmpRegistrationNickname")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EmpRegistrationObservations")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EmpRegistrationPostalCode")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EmpRegistrationTelephone")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("EmpRegistrationId");
-
-                    b.ToTable("EmployeeRegistrations");
-                });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
